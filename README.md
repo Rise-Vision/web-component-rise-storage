@@ -60,7 +60,7 @@ Finally, construct your HTML page. You should include `webcomponents.js` before 
 
 #### Attributes
 | Attribute       | Type                                                                            | Default        |
-| --------------- | ------------------------------------------------------------------------------- | -------------- |
+| --------------- | ------------------------------------------------------------------------------- |:--------------:|
 | `companyId`     | `<string>` The ID of the Company.                                               | ''             |
 | `folder`        | `<string>` The folder name.                                                     | ''             |
 | `fileName`      | `<string>` The file name within the folder.                                     | ''             |
@@ -68,7 +68,7 @@ Finally, construct your HTML page. You should include `webcomponents.js` before 
 
 #### Properties
 | Property         | Type                                              | Default |
-| ---------------- | ------------------------------------------------- | ------- |
+| ---------------- | ------------------------------------------------- |:------- :
 | `url`            | `<string>` The URL target of the request.         | ''      |
 | `isCacheRunning` | `<boolean>` Whether or not Rise Cache is running. | `false` |
 
