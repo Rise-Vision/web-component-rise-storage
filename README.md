@@ -61,16 +61,16 @@ Finally, construct your HTML page. You should include `webcomponents.js` before 
 #### Attributes
 | Attribute       | Type                                                                            | Default        |
 | --------------- | ------------------------------------------------------------------------------- | -------------- |
-| `companyId`     | *<string>* The ID of the Company.                                               | ''             |
-| `folder`        | *<string>* The folder name.                                                     | ''             |
-| `fileName`      | *<string>* The file name within the folder.                                     | ''             |
-| `folderRefresh` | *<number>* The number of seconds before the folder will be checked for changes. | 0 (no refresh) |
+| `companyId`     | `<string>` The ID of the Company.                                               | ''             |
+| `folder`        | `<string>` The folder name.                                                     | ''             |
+| `fileName`      | `<string>` The file name within the folder.                                     | ''             |
+| `folderRefresh` | `<number>` The number of seconds before the folder will be checked for changes. | 0 (no refresh) |
 
 #### Properties
 | Property         | Type                                              | Default |
 | ---------------- | ------------------------------------------------- | ------- |
-| `url`            | *<string>* The URL target of the request.         | ''      |
-| `isCacheRunning` | *<boolean>* Whether or not Rise Cache is running. | `false` |
+| `url`            | `<string>` The URL target of the request.         | ''      |
+| `isCacheRunning` | `<boolean>` Whether or not Rise Cache is running. | `false` |
 
 #### Events
 | Event                   | Description                        |
@@ -114,7 +114,6 @@ cd web-component-rise-storage
 npm install
 cd rise-storage
 bower install
-gulp build
 ```
 
 ### Run Locally
