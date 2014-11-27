@@ -59,17 +59,17 @@ Finally, construct your HTML page. You should include `webcomponents.js` before 
 ```
 
 #### Attributes
-| Attribute       | Type                                                                            | Default        |
-| --------------- | ------------------------------------------------------------------------------- |:--------------:|
-| `companyId`     | `<string>` The ID of the Company.                                               | ''             |
-| `folder`        | `<string>` The folder name.                                                     | ''             |
-| `fileName`      | `<string>` The file name within the folder.                                     | ''             |
-| `folderRefresh` | `<number>` The number of seconds before the folder will be checked for changes. | 0 (no refresh) |
+| Attribute       | Type                                                                            | Default          |
+| --------------- | ------------------------------------------------------------------------------- |:----------------:|
+| `companyId`     | `<string>` The ID of the Company.                                               | `''`             |
+| `folder`        | `<string>` The folder name.                                                     | `''`             |
+| `fileName`      | `<string>` The file name within the folder.                                     | `''`             |
+| `folderRefresh` | `<number>` The number of seconds before the folder will be checked for changes. | `0` (no refresh) |
 
 #### Properties
 | Property         | Type                                              | Default |
-| ---------------- | ------------------------------------------------- |:------- :
-| `url`            | `<string>` The URL target of the request.         | ''      |
+| ---------------- | ------------------------------------------------- |:-------:|
+| `url`            | `<string>` The URL target of the request.         | `''`    |
 | `isCacheRunning` | `<boolean>` Whether or not Rise Cache is running. | `false` |
 
 #### Events
