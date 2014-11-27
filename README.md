@@ -21,12 +21,12 @@ To install with npm:
 npm install webcomponents.js
 ```
 
-Next, install the Rise Storage Web Component using Bower:
+Next, install the Rise Storage Web Component with Bower:
 ```
 bower install rise-storage
 ```
 
-Next, construct your HTML page. You should include `webcomponents.js` before any code that touches the DOM, and load the web component using an HTML Import. For example:
+Finally, construct your HTML page. You should include `webcomponents.js` before any code that touches the DOM, and load the web component using an HTML Import. For example:
 ```
 <!DOCTYPE html>
 <html>
@@ -59,30 +59,30 @@ Next, construct your HTML page. You should include `webcomponents.js` before any
 ```
 
 #### Attributes
-| Attribute | Type | Default |
-| ------------- | ------------- |
-| `companyId` | *<string>* The ID of the Company. | '' |
-| `folder` | *<string>* The folder name. | '' |
-| `fileName` | *<string>* The file name within the folder. | '' |
+| Attribute       | Type                                                                            | Default        |
+| --------------- | ------------------------------------------------------------------------------- | -------------- |
+| `companyId`     | *<string>* The ID of the Company.                                               | ''             |
+| `folder`        | *<string>* The folder name.                                                     | ''             |
+| `fileName`      | *<string>* The file name within the folder.                                     | ''             |
 | `folderRefresh` | *<number>* The number of seconds before the folder will be checked for changes. | 0 (no refresh) |
 
 #### Properties
-| Property | Type | Default |
-| ------------- | ------------- |
-| `url` | *<string>* The URL target of the request. | '' |
-| `isCacheRunning` | *<boolean>* Whether or not Rise Cache is running. | false |
+| Property         | Type                                              | Default |
+| ---------------- | ------------------------------------------------- | ------- |
+| `url`            | *<string>* The URL target of the request.         | ''      |
+| `isCacheRunning` | *<boolean>* Whether or not Rise Cache is running. | `false` |
 
 #### Events
-| Event | Description |
-| ------------- | ------------- |
+| Event                   | Description                        |
+| ----------------------- | -----------------------------------|
 | `rise-storage-response` | Fired when a response is received. |
-| `rise-storage-error` | Fired when an error is received. |
+| `rise-storage-error`    | Fired when an error is received.   |
 
 
 #### Methods
-| Method | Description |
-| ------------- | ------------- |
-| `go` | Performs an Ajax request to the specified URL. |
+| Method | Description                                    |
+| ------ | ---------------------------------------------- |
+| `go`   | Performs an Ajax request to the specified URL. |
 
 ## Built With
 - [Polymer](https://www.polymer-project.org/)
