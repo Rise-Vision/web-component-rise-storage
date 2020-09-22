@@ -116,6 +116,14 @@
       env: {
         type: String,
         value: "prod"
+      },
+      endpointtype: {
+        type: String,
+        value :""
+      },
+      viewerid: {
+        type: String,
+        value: ""
       }
     },
 
@@ -709,6 +717,8 @@
         suffix = "?alt=media",
         modeSuffix = "&mode=",
         displayIdSuffix = "&displayid=" + this.displayid,
+        endpointSuffix = "&env=" + this.endpointtype,
+        viewerIdSuffix = "&viewerId=" + this.viewerid,
         cb = "&cb=" + new Date().getTime(),
         filesFiltered = 0,
         totalFiles = 0;
@@ -754,7 +764,7 @@
                   file.url = self._baseCacheUrl + "?url=" + encodeURIComponent(item.selfLink + suffix);
                 }
                 else if(!self._isOfflinePlayer()) {
-                  file.url = item.selfLink + suffix + modeSuffix + ((self._isPlayerRunning()) ? self.MODE_PLAYER : self.MODE_PREVIEW) + displayIdSuffix;
+                  file.url = item.selfLink + suffix + modeSuffix + ((self._isPlayerRunning()) ? self.MODE_PLAYER : self.MODE_PREVIEW + endpointSuffix + viewerIdSuffix) + displayIdSuffix;
                 }
                 else {
                   file.url = item.selfLink;
@@ -774,7 +784,7 @@
                   file.url = self._baseCacheUrl + "cb=" + new Date().getTime() + "?url=" + encodeURIComponent(item.selfLink + suffix);
                 }
                 else if(!self._isOfflinePlayer()) {
-                  file.url = item.selfLink + suffix + cb + modeSuffix + ((self._isPlayerRunning()) ? self.MODE_PLAYER : self.MODE_PREVIEW) + displayIdSuffix;
+                  file.url = item.selfLink + suffix + cb + modeSuffix + ((self._isPlayerRunning()) ? self.MODE_PLAYER : self.MODE_PREVIEW + endpointSuffix + viewerIdSuffix) + displayIdSuffix;
                 }
                 else {
                   file.url = item.selfLink;
@@ -1236,7 +1246,9 @@
         endIndex = -1,
         suffix = "?alt=media",
         modeSuffix = "&mode=",
-        displayIdSuffix = "&displayid=" + this.displayid;
+        displayIdSuffix = "&displayid=" + this.displayid,
+        endpointSuffix = "&env=" + this.endpointtype,
+        viewerIdSuffix = "&viewerId=" + this.viewerid;
 
       // File in the root of the bucket.
       if (response.selfLink) {
@@ -1257,7 +1269,7 @@
         this._fileUrl = encodeURIComponent("https://storage.googleapis.com/" + bucket + "/" + filePath);
       }
       else {
-        this._fileUrl = url + suffix + modeSuffix + ((this._isPlayerRunning()) ? this.MODE_PLAYER : this.MODE_PREVIEW) + displayIdSuffix;
+        this._fileUrl = url + suffix + modeSuffix + ((this._isPlayerRunning()) ? this.MODE_PLAYER : this.MODE_PREVIEW + endpointSuffix + viewerIdSuffix) + displayIdSuffix;
       }
     },
 
